@@ -1,0 +1,51 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+
+<style type="text/css">
+    html, body{
+		height: 100%;
+        background-color: #15202B;
+	}
+
+	#page-wrapper{
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		background-color: #15202B;
+        font-family: 'bebas neue';
+	}
+
+	#content{
+		max-width: 800px;
+		height: auto;
+		background-color: #192734;
+		border:1px solid #17a2b8;
+		border-radius: 5px;
+		padding: 25px;
+	}
+
+	#content p{
+		font-size: 18px;
+        font-family: 'ubuntu mono';
+	}
+</style>
+
+<div id="page-wrapper" class="page-wrapper">
+    <div id="content" class="content">
+        <h1>Thanks for reaching out!</h1>
+        <p>Your message was successfully sent!</p>
+        <div class="button-div">
+            <a id="back-button" href="{{url_for('home')}}" >
+            <button class="btn">
+                BACK TO HOME
+            </button>
+            </a>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

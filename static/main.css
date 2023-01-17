@@ -1,0 +1,528 @@
+body {
+    color: white;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+header {
+    font-size: 20px;
+	display: flex;
+	padding: 20px;
+    justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	transition: 500ms;
+    z-index: 2;
+    font-family: 'ubuntu mono';
+}
+
+.menu-btn {
+    display: none;
+}
+
+nav {
+    position: relative;
+}
+
+nav ul {
+    margin: 0 30px;
+    padding: 0;
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin-left: 10px;
+    margin-right: 20px;
+    text-align: center;
+}
+nav li a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 0.2em;
+    padding: 10px;
+    opacity: 0.7;
+    border-bottom: 2px solid transparent;
+    transition: opacity 0.3s ease, border-bottom 0.3s ease;
+}
+nav li a:hover {
+    opacity: 0.9;
+    border-bottom: 3px solid #17a2b8;
+}
+
+.section2 {
+    display: grid;
+    position: relative;
+    padding: 15% 0;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    font-family: 'bebas neue';
+    background-color: #15202B;
+    /* font-size: 4em; */
+}
+
+.section2 h1 {
+    padding-top: 13%;
+    font-size: 8em;
+    margin: auto;
+}
+
+.btn-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonDownload {
+    display: inline-block;
+    position: relative;
+    padding: 10px 25px;
+    background-color: #164D56;
+    color: white;
+    font-family: sans-serif;
+    text-decoration: none;
+    font-size: 0.9em;
+    text-align: center;
+    text-indent: 15px;
+    border: none;
+    cursor: pointer;
+}
+   
+.buttonDownload:hover {
+    background-color: #17a2b8;
+    color: white;
+}
+   
+.buttonDownload:before, .buttonDownload:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 15px;
+    top: 52%;
+}
+   
+.buttonDownload:before {
+    width: 10px;
+    height: 2px;
+    border-style: solid;
+    border-width: 0 2px 2px;
+}
+   
+.buttonDownload:after {
+    width: 0;
+    height: 0;
+    margin-left: 3px;
+    margin-top: -7px;
+    border-style: solid;
+    border-width: 4px 4px 0 4px;
+    border-color: transparent;
+    border-top-color: inherit;
+    animation: downloadArrow 1s linear infinite;
+    animation-play-state: paused;
+}
+
+.buttonDownload:hover:before {
+    border-color: #cdefbd;
+}
+   
+.buttonDownload:hover:after {
+    border-top-color: #cdefbd;
+    animation-play-state: running;
+}
+   
+@keyframes downloadArrow {
+    0% {
+     margin-top: -7px;
+     opacity: 1;
+    }
+   
+    0.001% {
+     margin-top: -15px;
+     opacity: 0.4;
+    }
+   
+    50% {
+     opacity: 1;
+    }
+   
+    100% {
+     margin-top: 0;
+     opacity: 0.4;
+    }
+}
+
+
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 6.6vmax;
+    padding-bottom: 8.8vw;
+    padding-right: 6.6vw;
+    padding-left: 6.6vw;
+    background-color: #192734;
+    border-top: 1px solid #164D56;
+    position: relative;
+}
+
+.about-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    padding-bottom: 10px;
+    padding-top: 10px;
+    gap: 100px;
+}
+
+.about-text {
+    display: flex;
+    width: auto;
+    border: none;
+    border: solid #17a2b8;
+    background-color: #15202B;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none;
+    outline: none;
+    padding: 1rem 30px;
+    margin-bottom: 1rem;
+    color: white;
+    font-weight: 500;
+    font-family: 'ubuntu mono';
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+.about-skills {
+    width: auto;
+    border: none;
+    border: solid #17a2b8;
+    background-color: #15202B;
+    padding: 0 2rem;
+}
+
+.about-skills h3 {
+    display: flex;
+    justify-content: center;
+    font-family: 'ubuntu mono';
+    text-transform: uppercase;
+}
+
+.skills-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.skills-images img {
+    width: 50%;
+    justify-self: center;
+}
+
+
+
+
+
+#projects {
+    background-color: #15202B;
+    overflow: auto;
+    border-top: 1px solid #164D56;
+    position: static;
+}
+
+#projects h2 {
+    text-align: center;
+    font-family: 'Saira Condensed';
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+#projects h3 {
+    text-transform: uppercase;
+    font-family: 'bebas neue';
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0;
+}
+
+.projects-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 450px);
+    gap: 20px;
+    justify-content: center;
+    padding-bottom: 50px;
+    margin: 5% auto;
+}
+
+.project-img-wrapper {
+    height: 100%;
+    border: 1px solid #164D56;
+    position: relative;
+}
+
+.projectimg {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+ 
+.text-container {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+  
+.project-img-wrapper:hover .projectimg {
+    opacity: 0.07;
+}
+
+.project-img-wrapper:hover .text-container {
+    opacity: 1;
+}
+
+.github {
+    color: white;
+    text-decoration: none;
+}
+
+  
+.text {
+    color: white;
+    font-size: 20px;
+    font-family: 'ubuntu mono';
+}
+
+.btn-project {
+    font-family: 'ubuntu mono';
+}
+
+.project-btn-link {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #17a2b8;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 17px;
+    padding: 8px;
+    width: 90px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 10px;
+    margin-left: 20px;
+}
+   
+.project-btn-link .btn-project {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+   
+.project-btn-link .btn-project:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: 0.5s;
+}
+   
+.project-btn-link:hover .btn-project {
+    padding-right: 15px;
+}
+   
+.project-btn-link:hover .btn-project:after {
+    opacity: 1;
+    right: 0;
+}
+
+
+
+
+#contact {
+    background-color: #192734;
+    border-top:solid #164D56;
+    padding: 1px;
+}
+
+#contact h3 {
+    padding: 20px;
+    padding-left: 10%;
+    margin: 10px;
+    text-align: left;
+    font-family: 'saira condensed';
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+form {
+    font-family: 'ubuntu mono';
+    width: 60vw;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border: solid #164D56;
+    background-color: #15202B;
+}
+
+#contact div {
+    border: none;
+    padding: 15px;
+}
+
+label, #contact p {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+
+input, textarea {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #192734;
+    border-radius: 5px;
+    border: 1px solid #164D56;
+    font-size: 14px;
+    color: white;
+    font-family: 'ubuntu mono';
+}
+
+input[type=text], input[type=email], textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.button-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    width: 6.5em;
+    height: 2.3em;
+    margin: 0.5em;
+    background: #192734;
+    color: white;
+    border: solid #164D56;
+    border-radius: 0.625em;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    font-family: 'ubuntu mono';
+    text-transform: uppercase;
+    overflow: hidden;
+}
+   
+.btn:hover {
+    color: white;
+}
+   
+.btn:after {
+    content: "";
+    background: #164D56;
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.5s;
+}
+   
+.btn:hover:after {
+    transform: skewX(-45deg) scale(1, 1);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+
+@media screen and (max-width: 780px) {
+    .section2 h1 {
+        padding-top: 13%;
+        font-size: 8em;
+        margin: auto;
+        display: flex;
+        text-align: center;
+    }
+
+    #contact h3 {
+        padding: auto;
+        padding-left: 0;
+        margin: auto;
+        text-align: center;
+        font-family: 'saira condensed';
+        text-transform: uppercase;
+        font-size: 2rem;
+    }
+}
+
+
+footer {
+    background-color: #15202B;
+    border-top: 1px solid #164D56;
+}
+
+.footer-content {
+    display: flex;
+    font-family: 'saira condensed';
+    text-transform: uppercase;
+    padding: 0 20px;
+}
+
+#footer h2 {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-img-link:first-child {
+    margin-right: 100px;
+}
+
+.footer-img-link {
+    display: flex;
+    gap: 10px;
+    padding-top: 10px;
+    margin-right: 10px;
+}
+
+
+
+
+.bgc {
+	background: rgba(0,0,0,.2);
+	padding: 5px 0;
+}
+.bgc .logo {
+	font-size: 30px;
+	color: white;
+}
+.bgc nav a {
+	color: white;
+}
